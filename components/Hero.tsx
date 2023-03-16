@@ -1,12 +1,13 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
+
 export default function Hero() {
   return (
     <div className="hero-container">
       <Container>
         <Row>
           <Col md={{ span: 6, offset: 3 }}>
-            <h1>Welcome to Pet Store</h1>
+            <h1>Welcome to Furry Rascals</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum magna et dui
               vehicula mollis.

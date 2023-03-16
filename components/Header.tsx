@@ -1,5 +1,6 @@
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, Image } from 'react-bootstrap';
 import Link from 'next/link';
+import Logo from '../assets/logo.png'
 
 export default function Header() {
   return (
@@ -7,14 +8,14 @@ export default function Header() {
       <Container>
         <Link href="/"
           className="navbar-brand">
-            <img
-              src="/logo.png"
-              width="30"
+            <Image
+                src={Logo}
+                 width="30"
               height="30"
               className="d-inline-block align-top"
               alt="Pet Store"
             />
-            Pet Store
+            Furry Rascals
           
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
