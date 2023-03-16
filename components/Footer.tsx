@@ -1,6 +1,29 @@
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import axios from 'axios';
+import { useState } from 'react';
 
 export default function Footer() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post('/api/signup', {
+        name,
+        email,
+      });
+      setMessage(response.data.message);
+      setName('');
+      setEmail('');
+      console.log('New sign up: ' + name + ' (' + email + ')');
+    } catch (error) {
+      console.error(error);
+      setMessage('An error occurred while signing up.');
+    }
+  };
+
   return (
     <div className="footer-container">
       <Container>
@@ -27,19 +50,39 @@ export default function Footer() {
           </Col>
           <Col md={4}>
             <h3>Address</h3>
-            <p>1234 Main St.</p>
-            <p>Anytown, USA 12345</p>
-            <p>(123) 456-7890</p>
+            <p>607 W 158th St.</p>
+            <p> New York, NY 10032</p>
+            <p>(646) 476-4058</p>
           </Col>
           <Col md={4}>
             <h3>Newsletter</h3>
             <p>Sign up for our newsletter to get the latest news and offers!</p>
-            <Form>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+            <Form onSubmit={handleSubmit}>
+              <Form.Group >
+                <Form.Label htmlFor="name">Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your name"
+                  name="name"
+                  id="name"
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                  className="form-control"
+                  required />
               </Form.Group>
-
+              <Form.Group >
+                <Form.Label htmlFor="email">Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter your email"
+                  name="email"
+                  id="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  className="form-control"
+                  required />
+              </Form.Group>
+              <p>{message}</p>
               <Button variant="primary" type="submit">
                 Sign Up
               </Button>

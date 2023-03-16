@@ -1,6 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
-
 export default function Hero() {
   return (
     <div className="hero-container">
