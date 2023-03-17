@@ -10,25 +10,25 @@ interface Product {
 const products: Product[] = [
   {
     name: 'Dog Food',
-    image: '/product-1.jpg',
+    image: 'https://images.unsplash.com/photo-1601758228006-964e41e5e8eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80',
     price: 29.99,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum magna et dui vehicula mollis.',
   },
   {
     name: 'Cat Toy',
-    image: '/product-2.jpg',
+    image: 'https://images.unsplash.com/photo-1625142918110-5f9fe7a56027?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80',
     price: 14.99,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum magna et dui vehicula mollis.',
   },
   {
     name: 'Dog Collar',
-    image: '/product-3.jpg',
+    image: 'https://images.unsplash.com/photo-1556229174-5e42a09e45af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1298&q=80',
     price: 19.99,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum magna et dui vehicula mollis.',
   },
   {
     name: 'Cat Food',
-    image: '/product-4.jpg',
+    image: 'https://images.unsplash.com/photo-1604544203292-0daa7f847478?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80',
     price: 24.99,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum magna et dui vehicula mollis.',
   },

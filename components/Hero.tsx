@@ -16,7 +16,7 @@ export default function Hero() {
       </Container>
       <style jsx>{`
         .hero-container {
-          background-image: url('/hero-bg.jpg');
+          background-image: url('https://images.unsplash.com/photo-1667864299172-7f5b748655ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80');
           background-size: cover;
           color: #fff;
           padding: 200px 0;
